@@ -122,7 +122,7 @@ some exercises to help you understand functions:
   };
 
   // set values in the args to pass the assert
-  let arg_1 = "", arg_2 = "", arg_3 = "";
+  let arg_1 = "y", arg_2 = "x", arg_3 = "z";
   let return_val = f(arg_1, arg_2, arg_3);
 
   console.assert(return_val === "xyz", "4: return_val === " + return_val);
@@ -141,7 +141,7 @@ some exercises to help you understand functions:
    };
 
    let x = "x", y = "y", z = "z";
-   let return_val = f(/* pass x, y & z in the right order */);
+   let return_val = f(y,z,x);
 
    console.assert(return_val === "xyz", "5: return_val === " + return_val);
 }
@@ -159,7 +159,7 @@ some exercises to help you understand functions:
    };
 
    let x = "x", y = "y", z = "z";
-   let return_val = f(/* pass x, y & z in the right order */);
+   let return_val = f(z,x,y);
 
    console.assert(return_val === "xzy", "6: return_val === " + return_val);
 }
@@ -172,7 +172,7 @@ some exercises to help you understand functions:
 ```js
 {  // 7
    function f(param_1, param_2, param_3) {
-    var result = /* arrange the params to pass the assert */;
+    var result = param_3 + param_1 + param_2;
     return result;
    };
 
@@ -190,7 +190,7 @@ some exercises to help you understand functions:
 ```js
 {  // 8
    function f(param_1, param_2, param_3) {
-    var result = /* arrange the params to pass the assert */;
+    var result = param_2 + param_3 + param_1;
     return result;
    };
 
