@@ -78,7 +78,7 @@ some exercises to help you understand functions:
   };
 
   // set values in the args to pass the assert
-  let arg_1 = "", arg_2 = "", arg_3 = "";
+  let arg_1 = "x", arg_2 = "z", arg_3 = "y";
   let return_val = f(arg_1, arg_2, arg_3);
 
   console.assert(return_val === "yxz", "2: return_val === " + return_val);
