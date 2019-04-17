@@ -126,7 +126,9 @@ let arr = {};
 let _ = null;
 
 // --- swap below here ---
-
+_ = obj;
+obj=arr;
+arr=_
 ```
 
 __Complete this code__  
