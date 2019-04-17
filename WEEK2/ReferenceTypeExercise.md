@@ -166,21 +166,21 @@ __Complete the Assertions__
 ```js
 let a_1 = [];
 let a_2 = a_1;
-console.assert(a_1 /* === or !== ? */ a_2);
+console.assert(a_1 === a_2);
 
 let b_1 = [];
 let b_2 = [];
-console.assert(b_1 /* === or !== ? */ b_2);
+console.assert(b_1 !== b_2);
 
 // ---
 
-let a_1.push(3);
-let a_2.push(3);
-console.assert(a_1 /* === or !== ? */ a_2);
+a_1.push(3);
+a_2.push(3);
+console.assert(a_1 === a_2);
 
-let b_1.push(5);
-let b_2.push(5);
-console.assert(b_1 /* === or !== ? */ b_2);
+b_1.push(5);
+b_2.push(5);
+console.assert(b_1 !== b_2);
 ```
 
 __Complete the Assertions__  
@@ -188,48 +188,48 @@ __Complete the Assertions__
 ```js
 let a_1 = [];
 let a_2 = a_1;
-console.assert(a_1 /* === or !== ? */ a_2);
-
+console.assert(a_1 === a_2);
+	
 let b_1 = [];
 let b_2 = [];
-console.assert(b_1 /* === or !== ? */ b_2);
+console.assert(b_1 !==  b_2);
 
 // ---
 
-const index = 0;
+const index =0;
+	
+a_1[index] = 3;
+a_2[index] = 3;
+console.assert(a_1 === a_2);
 
-let a_1[index] = 3;
-let a_2[index] = 3;
-console.assert(a_1 /* === or !== ? */ a_2);
-
-let b_1[index] = 5;
-let b_2[index] = 5;
-console.assert(b_1 /* === or !== ? */ b_2);
+b_1[index] = 5;
+b_2[index] = 5;
+console.assert(b_1 !== b_2);
 ```
 
 __Fill in the Blanks__  
 [on pytut](http://www.pythontutor.com/javascript.html#code=%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28arr_1%20!%3D%3D%20arr_2%29%3B%0Aconsole.assert%28arr_1%5B1%5D%20%3D%3D%3D%20arr_2%5B1%5D%29%3B%0A%0Alet%20key%20%3D%200%3B%0Aconsole.assert%28arr_1%5Bkey%5D%20%3D%3D%3D%20arr_2%5Bkey%5D%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28arr_1%5Barr_2%5B2%5D%5D%20%3D%3D%3D%20arr_2%5Barr_1%5B2%5D%5D%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28arr_1%20%3D%3D%3D%20arr_2%29%3B%0Aconsole.assert%28arr_3%20!%3D%3D%20arr_1%29%3B%0Aconsole.assert%28arr_3%20!%3D%3D%20arr_2%29%3B%0Aconsole.assert%28arr_3%5Bkey%5D%20%3D%3D%3D%20arr_1%5B0%5D%29%3B%0A%0A%20%20%20%20%3B%20//%20write%20this%20line%0Aconsole.assert%28obj_3%5B1%5D%20%3D%3D%3D%20obj_2%5Bkey%5D%29%3B%0A&mode=edit&origin=opt-frontend.js&py=js&rawInputLstJSON=%5B%5D)
 ```js
-    ; // write this line
-    ; // write this line
+let arr_1 = [1,2,3]; // write this line
+let arr_2 = [1,2,3]; // write this line
 console.assert(arr_1 !== arr_2);
 console.assert(arr_1[1] === arr_2[1]);
 
 let key = 0;
 console.assert(arr_1[key] === arr_2[key]);
 
-    ; // write this line
-    ; // write this line
+arr_1.push(4); // write this line
+arr_2.push(4); // write this line
 console.assert(arr_1[arr_2[2]] === arr_2[arr_1[2]]);
-
-    ; // write this line
-    ; // write this line
+	
+arr_1 = arr_2; // write this line
+let arr_3 = [1]    ; // write this line
 console.assert(arr_1 === arr_2);
 console.assert(arr_3 !== arr_1);
 console.assert(arr_3 !== arr_2);
 console.assert(arr_3[key] === arr_1[0]);
-
-    ; // write this line
+	
+let obj_3 = [1,0] , obj_2 = [0,1]; // write this line
 console.assert(obj_3[1] === obj_2[key]);
 ```
 
