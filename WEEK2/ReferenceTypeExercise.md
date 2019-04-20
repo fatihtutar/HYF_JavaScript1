@@ -327,6 +327,9 @@ let _ = null;
 // swap the values stored in each structure
 //  using dot notation for the object
 //  using direct access for the array
+_ = arr[0];
+arr[0]=obj.prop;
+obj.prop=_;
 ```
 
 __Swap 'em__  
@@ -341,6 +344,10 @@ let _ = null;
 //  using variable access for the array
 const obj_key = ;
 const arr_index = ;
+
+_ = arr[arr_index];
+arr[arr_index] = obj[obj_key];
+obj[obj_key]= _;
 ```
 
 __Relative vs Absolute__  
