@@ -99,6 +99,8 @@ SOLUTION
   console.assert(return_val === "yxz", "2: return_val === " + return_val);
 }
 ```
+SOLUTION
+
 
 ### 3
 
