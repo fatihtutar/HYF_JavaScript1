@@ -100,7 +100,20 @@ SOLUTION
 }
 ```
 SOLUTION
+```js
+{  // 2
+  function f(param_1, param_2, param_3) {
+    var result = param_3 + param_1 + param_2;
+    return result;
+  };
 
+  // set values in the args to pass the assert
+  let arg_1 = "x", arg_2 = "z", arg_3 = "y";
+  let return_val = f(arg_1, arg_2, arg_3);
+
+  console.assert(return_val === "yxz", "2: return_val === " + return_val);
+}
+```
 
 ### 3
 
@@ -123,6 +136,25 @@ SOLUTION
   console.assert(return_val === "yxz", "3: return_val === " + return_val);
 }
 ```
+SOLUTION
+```js
+{  // 3
+  function f(param_1, param_2, param_3) {
+    var _ = param_2;
+    param_2 = param_1;
+    param_1 = _;
+    var result = param_3 + param_1 + param_2;
+    return result;
+  };
+
+  // set values in the args to pass the assert
+  let arg_1 = "", arg_2 = "", arg_3 = "";
+  let return_val = f(arg_1, arg_2, arg_3);
+
+  console.assert(return_val === "yxz", "3: return_val === " + return_val);
+}
+```
+
 
 ### 4
 
